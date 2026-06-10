@@ -74,6 +74,16 @@ with st.sidebar:
         "suspicious activity. The AI analyst will assess "
         "the threat level and recommend next steps."
     )
+    st.divider()
+    st.markdown("**🔗 Project context**")
+    st.markdown(
+        "This chatbot is the **explanation layer** for the "
+        "Port Scanner Anomaly Detector project.\n\n"
+        "The ML models flag suspicious connections. "
+        "This chatbot explains **why** they are flagged "
+        "in plain English — solving the alert fatigue problem "
+        "by giving analysts actionable context, not just verdicts."
+    )
 
 # --- Initialise session state ---
 if "messages" not in st.session_state:
@@ -146,6 +156,6 @@ if user_input:
     # Save assistant response to history
     st.session_state["messages"].append({
         "role": "assistant",
-        "content": full_response
+        "content": format_response(full_response)
     })
     
