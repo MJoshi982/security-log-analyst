@@ -2,27 +2,6 @@
 # app.py
 import streamlit as st
 from sample_logs import SAMPLE_LOGS
-def format_response(response_text):
-    """
-    Scan the response for threat level keywords and
-    prepend a coloured badge so it is easy to read at a glance.
-    """
-    text_lower = response_text.lower()
-
-    if "threat level: critical" in text_lower:
-        badge = "🔴 **CRITICAL THREAT**"
-    elif "threat level: high" in text_lower:
-        badge = "🟠 **HIGH THREAT**"
-    elif "threat level: medium" in text_lower:
-        badge = "🟡 **MEDIUM THREAT**"
-    elif "threat level: low" in text_lower:
-        badge = "🟢 **LOW THREAT**"
-    elif "threat level: none" in text_lower:
-        badge = "✅ **NO THREAT**"
-    else:
-        badge = "🔵 **ANALYSIS COMPLETE**"
-
-    return f"{badge}\n\n---\n\n{response_text}"
 
 # --- Page configuration ---
 st.set_page_config(
@@ -102,6 +81,29 @@ prefill_value = st.session_state.pop("prefill", "")
 user_input = st.chat_input(
     "Paste a network log or ask a security question...",
 )
+
+def format_response(response_text):
+    """
+    Scan the response for threat level keywords and
+    prepend a coloured badge so it is easy to read at a glance.
+    """
+    text_lower = response_text.lower()
+
+    if "threat level: critical" in text_lower:
+        badge = "🔴 **CRITICAL THREAT**"
+    elif "threat level: high" in text_lower:
+        badge = "🟠 **HIGH THREAT**"
+    elif "threat level: medium" in text_lower:
+        badge = "🟡 **MEDIUM THREAT**"
+    elif "threat level: low" in text_lower:
+        badge = "🟢 **LOW THREAT**"
+    elif "threat level: none" in text_lower:
+        badge = "✅ **NO THREAT**"
+    else:
+        badge = "🔵 **ANALYSIS COMPLETE**"
+
+    return f"{badge}\n\n---\n\n{response_text}"
+
 
 # If a sample was loaded, use it as the input automatically
 if prefill_value and not user_input:
