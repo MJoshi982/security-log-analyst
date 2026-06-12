@@ -33,20 +33,17 @@ The source sent zero bytes, meaning it never completed a real connection
 before an attack. Recommend: block the source IP immediately.
 
 
-## How it works — step by step
-You paste a network log
-        ↓
-Streamlit web page receives it
-        ↓
-System prompt turns the AI into a security analyst
-        ↓
-Ollama runs Llama 3.2 locally on your machine
-        ↓
-AI analyses the log numbers and writes an explanation
-        ↓
-Response streams back to your screen in real time
-        ↓
-You get: threat level + explanation + recommendation
+### How it works — step by step
+
+```
+Step 1 → You paste a network log
+Step 2 → Streamlit web page receives it
+Step 3 → System prompt turns the AI into a security analyst
+Step 4 → Ollama runs Llama 3.2 locally on your machine
+Step 5 → AI analyses the log numbers and writes an explanation
+Step 6 → Response streams back to your screen in real time
+Step 7 → You get: threat level + explanation + recommendation
+```
 Three things make it work together:
 Ollama runs the AI model locally — no internet, no paid API, nothing
 leaves your computer.
