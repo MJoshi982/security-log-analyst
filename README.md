@@ -1,1 +1,1 @@
-# AI-Capstone-project
+# Security-log-analyst
