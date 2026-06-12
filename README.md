@@ -1,4 +1,3 @@
-# Security-log-analyst
 # Security Log Analyst Chatbot
 
 ## What this app does
