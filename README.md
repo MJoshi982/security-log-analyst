@@ -40,7 +40,7 @@ Into this:
 >
 > The source sent zero bytes, meaning it never completed a real connection
 > — classic SYN scan behaviour. It probed 94% different services across
-> 255 hosts, which is the signature of an attacker mapping your network
+> 255 hosts, which is the signature of an attacker mapping SecLogAI network
 > before an attack. **Recommend: block the source IP immediately.**
 
 ---
@@ -54,11 +54,11 @@ Streamlit web page receives it
         ↓
 System prompt turns the AI into a security analyst
         ↓
-Ollama runs Llama 3.2 locally on your machine
+Ollama runs Llama 3.2 locally on SecLogAI machine
         ↓
 AI analyses the log numbers and writes an explanation
         ↓
-Response streams back to your screen in real time
+Response streams back to SecLogAI screen in real time
         ↓
 You get: threat level + explanation + recommendation
 ```
@@ -66,7 +66,7 @@ You get: threat level + explanation + recommendation
 Three things make it work together:
 
 **Ollama** runs the AI model locally — no internet, no paid API, nothing
-leaves your computer.
+leaves SecLogAI computer.
 
 **Llama 3.2** is the open-source language model that does the actual
 reasoning — it understands what combinations of log values mean in a
@@ -89,12 +89,12 @@ something is wrong. They do not tell you why or what to do.
 | Wireshark | Shows raw packet data | Requires expert knowledge to read |
 | Splunk | Collects and dashboards logs | Still produces unexplained alerts, very expensive |
 | CrowdStrike | Blocks known threats automatically | Black box — no reasoning shown to the analyst |
-| **Your chatbot** | Explains what was flagged and why | Not a detector — it is the explanation layer |
+| **SecLogAI chatbot** | Explains what was flagged and why | Not a detector — it is the explanation layer |
 
 The simplest way to put it:
 
 > Snort says **"alert."** Wireshark shows you **raw data.**
-> Your chatbot says **"here is what this means, here is why it is
+> SecLogAI chatbot says **"here is what this means, here is why it is
 > dangerous, and here is what you should do right now."**
 
 ---
@@ -114,7 +114,7 @@ The industry tools address this with expensive AI layers:
 - Charlotte AI (CrowdStrike) and Purple AI (SentinelOne) let analysts
   query in plain English instead of learning SPL or KQL.
 
-**Your chatbot addresses the same problem** — unexplained alerts
+**SecLog AI chatbot addresses the same problem** — unexplained alerts
 overwhelming analysts — using a free local LLM instead of a
 six-figure enterprise subscription. The approach is the same.
 The price difference is enormous.
@@ -162,7 +162,7 @@ Run the app:
 uv run streamlit run app.py
 ```
 
-Open your browser to http://localhost:8501
+Open SecLogAI browser to http://localhost:8501
 
 ## How to use it
 
@@ -171,7 +171,7 @@ Open your browser to http://localhost:8501
 3. Press Enter in the chat box
 4. Read the threat analysis
 
-Or type your own network log or security question directly.
+Or type SecLogAI own network log or security question directly.
 
 ## Tools used
 
