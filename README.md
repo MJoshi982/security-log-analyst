@@ -98,7 +98,7 @@ The simplest way to put it:
 > dangerous, and here is what you should do right now."**
 
 ---
-## 4. The Alert Fatigue Problem — Where SecLo Fits
+## 4. The Alert Fatigue Problem 
 
 73% of security teams name false positives as their top detection
 challenge. 46% of all alerts prove to be false positives — nearly
