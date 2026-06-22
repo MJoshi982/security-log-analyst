@@ -106,6 +106,9 @@ false positives. Instead of reading through raw log numbers to decide if
 an alert is real or not, the chatbot explains it instantly — so analysts
 spend less time on dead ends and more time on actual threats.
 
+> It is an AI assistant that turns confusing network logs into plain-English
+> threat reports — bridging the gap between an automated alert and a human
+> analyst who needs to understand it.
 
 ## How to run it
 
