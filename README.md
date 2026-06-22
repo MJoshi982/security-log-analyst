@@ -98,6 +98,28 @@ The simplest way to put it:
 > dangerous, and here is what you should do right now."**
 
 ---
+## 4. The Alert Fatigue Problem — Where SecLo Fits
+
+73% of security teams name false positives as their top detection
+challenge. 46% of all alerts prove to be false positives — nearly
+half of every analyst's workload generates no security value.
+
+SOC analyst average tenure sits at 18–24 months, among the shortest
+in all of IT. 71% of SOC analysts experience burnout, and 64% are
+considering leaving their roles within a year.
+
+The industry tools address this with expensive AI layers:
+- Splunk ES uses agentic AI to prioritise, enrich, and explain alerts,
+  reducing false positives by an average of 46%.
+- Charlotte AI (CrowdStrike) and Purple AI (SentinelOne) let analysts
+  query in plain English instead of learning SPL or KQL.
+
+**Your chatbot addresses the same problem** — unexplained alerts
+overwhelming analysts — using a free local LLM instead of a
+six-figure enterprise subscription. The approach is the same.
+The price difference is enormous.
+
+---
 
 ## Who it is built for
 
